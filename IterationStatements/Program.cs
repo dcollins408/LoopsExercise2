@@ -15,23 +15,26 @@ namespace IterationStatements
             
             //-----START HERE------------------------------------------
 
-            //TODO - Create a variable of type int and name it "num"
-            //TODO - Initialize the variable with a value of 0
+            // Create a variable of type int and name it "num" DONE!
+            // Initialize the variable with a value of 0 - DONE!
+
+	    int num = 0;
 
 
 
             //TODO - Create a do-while loop using the existing brackets as a template.
             // The existing brackets are placeholders for your loop code.
             // Inside this loop:
-            // a) Increment "num" by 1
-            // b) Then add "num" to the collection "numbers"
+            // a) Increment "num" by 1 - DONE!
+            // b) Then add "num" to the collection "numbers" - DONE!
             //    Hint: Use "numbers.Add(num);" to add the current value of "num" to the list.
-
+	    do
             {
-                // Your code goes here
-                numbers.Add(/*num*/); //uncomment out `num` to add it to the collection "numbers"
-            } 
-            //TODO - Continue the loop while "num" is less than 100
+                num++; // Increment num by 1
+                numbers.Add(num); //uncomment out `num` to add it to the collection "numbers"
+            } while (num > 100);
+	    // - Continue the loop while "num" is less than 100 - DONE!
+	    //
             
 
             //TODO - Create a while loop using the existing brackets as a template.
@@ -41,9 +44,10 @@ namespace IterationStatements
             // a) Increment "num" by 1
             // b) Then add "num" to the collection "numbers"
             //    Hint: You can copy how this was done in the do-while loop
-
+	    while (num > 200)
             {
-                // Your code goes here
+		    numbers.Add(num); // Adding num to the collection of numbers from part b above
+		    num++; // Increment num by 1 from part a above
             }
             
 
@@ -52,11 +56,12 @@ namespace IterationStatements
             Console.WriteLine("Increase:");
 
 
-            //TODO - Create a foreach loop using the existing brackets as a template.
+            // Create a foreach loop using the existing brackets as a template.
             // The existing brackets are placeholders for your loop code.
-            // Inside this loop, print each number in "numbers".
-            {
-                // Your code goes here
+            // Inside this loop, print each number in "numbers". DONE!
+            foreach (var numb in numbers)
+	    {
+                Console.WriteLine($"{numb}"); // This line should print each number in the numbers list
             }
              
 
@@ -65,19 +70,20 @@ namespace IterationStatements
             Console.WriteLine("Decrease:");
 
 
-            //TODO - Create a for loop using the existing brackets as a template.
+            // Create a for loop using the existing brackets as a template.
             // The existing brackets are placeholders for your loop code.
             // This loop will print the numbers in reverse order - from 200 to 1.
 
-            // a) In your initializer, set the value of "i" to 199
+            // a) In your initializer, set the value of "i" to 199. DONE!
             // b) In your conditional, ensure that the loop continues as long as "i" is:
-            //    - Less than or equal to the number of items in "numbers" (use "numbers.Count")
-            //    - Greater than or equal to 0
-            // c) Decrement "i" by 1 in each iteration
-
+            //    - Less than or equal to the number of items in "numbers" (use "numbers.Count"). DONE!
+            //    - Greater than or equal to 0. DONE!
+            // c) Decrement "i" by 1 in each iteration. DONE!
+	    for(int i = 199; i <= numbers.Count || i >= 0; i--)
             {
-                //TODO - Inside the loop, place numbers[i] inside of the Console.WriteLine() method
+                // Inside the loop, place numbers[i] inside of the Console.WriteLine() method
                 Console.WriteLine(numbers[i]); // Example placement of numbers[i] inside Console.WriteLine
+		
             }
 
             //------------End of exercise
