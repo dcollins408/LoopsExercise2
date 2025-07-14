@@ -32,7 +32,8 @@ namespace IterationStatements
             {
                 num++; // Increment num by 1
                 numbers.Add(num); //uncomment out `num` to add it to the collection "numbers"
-            } while (num > 100);
+	    }
+             while (num < 100);
 	    // - Continue the loop while "num" is less than 100 - DONE!
 	    //
             
@@ -44,7 +45,7 @@ namespace IterationStatements
             // a) Increment "num" by 1
             // b) Then add "num" to the collection "numbers"
             //    Hint: You can copy how this was done in the do-while loop
-	    while (num > 200)
+	    while (num < 200)
             {
 		    numbers.Add(num); // Adding num to the collection of numbers from part b above
 		    num++; // Increment num by 1 from part a above
@@ -61,7 +62,7 @@ namespace IterationStatements
             // Inside this loop, print each number in "numbers". DONE!
             foreach (var numb in numbers)
 	    {
-                Console.WriteLine($"{numb}"); // This line should print each number in the numbers list
+                Console.WriteLine(numb); // This line should print each number in the numbers list
             }
              
 
